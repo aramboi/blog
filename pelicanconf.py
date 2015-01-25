@@ -15,9 +15,9 @@ DEFAULT_LANG = u'en'
 DEFAULT_PAGINATION = 10
 
 THEME = 'theme/pure-single/'
-COVER_IMG_URL = 'images/alt-bg.png'
-FAVICON_URL = 'images/alt-favicon.png'
-PROFILE_IMG_URL = 'images/me.jpg'
+COVER_IMG_URL = '/images/alt-bg.png'
+FAVICON_URL = '/images/alt-favicon.png'
+PROFILE_IMG_URL = '/images/me.jpg'
 
 MENUITEMS = [('Archive', 'archives.html'), ('About', 'about.html'), ]
 
