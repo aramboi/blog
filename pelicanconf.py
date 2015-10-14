@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Angel Ramboi'
 SITENAME = u'¬_¬'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'http://local.dev:8000'
 FEED_DOMAIN = SITEURL
 TAGLINE = 'They mostly come at night ... mostly!'
 
@@ -12,14 +12,14 @@ PATH = 'content'
 
 TIMEZONE = 'Europe/Dublin'
 DEFAULT_LANG = u'en'
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 15
 
 THEME = 'theme/pure-single/'
 COVER_IMG_URL = '/images/alt-bg.png'
 FAVICON_URL = '/images/alt-favicon.png'
 PROFILE_IMG_URL = '/images/me.jpg'
 
-MENUITEMS = [('Archive', 'archives.html'), ('About', 'about.html'), ]
+MENUITEMS = [('Archive', '/archives.html'), ('About', '/about.html'), ]
 
 SOCIAL = (
     ('twitter', 'https://twitter.com/angelramboi'),
