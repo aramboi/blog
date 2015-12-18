@@ -78,8 +78,9 @@ The good news is that customizations done in Windows to any of the LEDs carries 
 
 ### Conclusion
 
-TODO
+Alienware 13 is a great and powerful gaming laptop, and with a bit of work it behaves really well under Linux also. I played the native Steam version of "Bioshock Infinite" on high settings with very good frame rate under Ubuntu 15.10, so I am very happy with how things turned up.
 
+PS: For this blog post I wanted to do also a recording with "Bioshock Infinite" running native on Ubuntu, but the frame rates while recording were horrendous and lowering the settings would not have done the game justice.
 
 
 [1]: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1383184
