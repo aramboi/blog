@@ -3,10 +3,10 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Angel Ramboi'
-SITENAME = u'¬_¬'
-SITEURL = 'http://local.dev:8000'
+SITENAME = u'Angel Ramboi'
+SITEURL = 'http://localhost:8000'
 FEED_DOMAIN = SITEURL
-TAGLINE = 'They mostly come at night ... mostly!'
+TAGLINE = u'coder, gamer, geek'
 
 PATH = 'content'
 
@@ -22,9 +22,8 @@ PROFILE_IMG_URL = '/images/me.jpg'
 MENUITEMS = [('Archive', '/archives.html'), ('About', '/about.html'), ]
 
 SOCIAL = (
-    ('twitter', 'https://twitter.com/angelramboi'),
+    ('twitter', 'https://twitter.com/AngelRamboi'),
     ('github', 'https://github.com/aramboi'),
-    ('bitbucket', 'https://bitbucket.org/aramboi'),
     ('rss', 'http://altshiftkill.com/feeds/all.atom.xml'),
 )
 

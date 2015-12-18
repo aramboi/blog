@@ -2,14 +2,12 @@ Title: Making a property behave like a classmethod
 Date: 2013-07-11
 Category: python
 Slug: making-a-property-behave-like-a-classmethod
-Tags: python, classmethod, classproperty
+Tags: python, classmethod, property
 Summary: Using @property is nice and peachy when you use the instance of the class, but what if you need to get that property without instantiating the class.
 
-Using @property is nice and peachy when you use the instance of the class,
-but what if you need to get that property without instantiating the class.
+Using @property is nice and peachy when you use the instance of the class, but what if you need to get that property without instantiating the class.
 
-You can do that with @classmethod (you'd say), but I want to use it as an
-attribute not as a method.
+You can do that with @classmethod (you'd say), but I want to use it as an attribute not as a method.
 
 Without further ado, the _hack_:
 
