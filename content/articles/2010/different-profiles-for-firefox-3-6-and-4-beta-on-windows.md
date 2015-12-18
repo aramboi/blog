@@ -1,7 +1,7 @@
 Title: Different profiles for Firefox 3.6 and 4 beta on Windows
 Date: 2010-11-08 13:14
-Category: misc
-Tags: firefox, profiles
+Category: browser
+Tags: firefox, profiles, windows, beta
 Summary: This is one of those case when I miss a sane CLI in Windows.
 
 When installing Mozilla Minefield (Firefox daily builds) on Ubuntu, it
