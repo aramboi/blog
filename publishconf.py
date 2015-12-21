@@ -10,6 +10,9 @@ from pelicanconf import *  # NOQA
 SITEURL = 'http://altshiftkill.com'
 RELATIVE_URLS = False
 
+DISQUS_SITENAME = 'altshiftkill'
+DISQUS_ON_PAGES = False
+
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
