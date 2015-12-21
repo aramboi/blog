@@ -10,7 +10,7 @@ TAGLINE = u'coder, gamer, geek'
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Dublin'
+TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = u'en'
 DEFAULT_PAGINATION = 15
 
@@ -19,7 +19,10 @@ COVER_IMG_URL = '/images/alt-bg.png'
 FAVICON_URL = '/images/alt-favicon.png'
 PROFILE_IMG_URL = '/images/me.jpg'
 
-MENUITEMS = [('Archive', '/archives.html'), ('About', '/about.html'), ]
+MENUITEMS = [
+    ('Archive', '/archives.html'),
+    # ('About', '/about.html'),
+]
 
 SOCIAL = (
     ('twitter', 'https://twitter.com/AngelRamboi'),
@@ -28,8 +31,5 @@ SOCIAL = (
 )
 
 DISPLAY_PAGES_ON_MENU = False
-ARTICLE_URL = '{slug}/'
-ARTICLE_SAVE_AS = '{slug}/index.html'
-PAGE_URL = PAGE_SAVE_AS = '{slug}.html'
 
 RELATIVE_URLS = False
