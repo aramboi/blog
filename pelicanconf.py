@@ -1,17 +1,15 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+#!/usr/bin/env python3
 
-AUTHOR = u'Angel Ramboi'
-SITENAME = u'Angel Ramboi'
-SITEURL = 'http://localhost:8080'
+AUTHOR = 'Angel Ramboi'
+SITENAME = 'Angel Ramboi'
+SITEURL = 'http://localhost:8000'
 FEED_DOMAIN = SITEURL
-TAGLINE = u'coder, gamer, geek'
+TAGLINE = 'coder, gamer, geek'
 
 PATH = 'content'
 
 TIMEZONE = 'Europe/Bucharest'
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 DEFAULT_PAGINATION = 15
 
 THEME = 'theme/pure-single/'
@@ -27,7 +25,7 @@ MENUITEMS = [
 SOCIAL = (
     ('twitter', 'https://twitter.com/angelramboi'),
     ('github', 'https://github.com/aramboi'),
-    ('rss', 'http://altshiftkill.com/feeds/all.atom.xml'),
+    ('rss', 'http://www.angelramboi.com/feeds/all.atom.xml'),
 )
 
 DISPLAY_PAGES_ON_MENU = False
