@@ -25,7 +25,7 @@ MENUITEMS = [
 SOCIAL = (
     ('twitter', 'https://twitter.com/angelramboi'),
     ('github', 'https://github.com/aramboi'),
-    ('rss', 'http://www.angelramboi.com/feeds/all.atom.xml'),
+    ('rss', 'https://www.angelramboi.com/feeds/all.atom.xml'),
 )
 
 DISPLAY_PAGES_ON_MENU = False

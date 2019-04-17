@@ -6,6 +6,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *  # noqa
 
 SITEURL = 'https://www.angelramboi.com'
+FEED_DOMAIN = SITEURL
 RELATIVE_URLS = False
 
 # DISQUS_SITENAME = 'altshiftkill'
