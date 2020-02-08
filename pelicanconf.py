@@ -8,14 +8,14 @@ TAGLINE = 'coder, gamer, geek'
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Bucharest'
+TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'en'
 DEFAULT_PAGINATION = 15
 
 THEME = 'theme/pure-single/'
 COVER_IMG_URL = '/images/alt-bg.png'
 FAVICON_URL = '/images/alt-favicon.png'
-PROFILE_IMG_URL = '/images/me.jpg'
+PROFILE_IMG_URL = '/images/profile-pic.jpg'
 
 MENUITEMS = [
     ('Archive', '/archives.html'),

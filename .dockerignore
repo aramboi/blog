@@ -1,8 +1,0 @@
-content/
-theme/
-.gitignore
-.dockerignore
-Dockerfile
-Makefile
-*.py
-Pipfile*
