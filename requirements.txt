@@ -3,3 +3,4 @@ Markdown
 typogrify
 pelican-extended-sitemap
 py_w3c
+flake8
