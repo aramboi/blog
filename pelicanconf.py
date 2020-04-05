@@ -49,11 +49,12 @@ ATTRIBUTION = False
 # Social icons in footer
 TWITTER = 'https://twitter.com/angelramboi'
 GITHUB = 'https://github.com/aramboi'
+LINKEDIN = 'https://www.linkedin.com/in/aramboi'
 # Gravatar
 GRAVATAR = 'https://secure.gravatar.com/avatar/f03910605400a038f8a874cb3e5dc10b?s=256'
 
 MENUITEMS = [
-    ('categories', '/categories'),
+    # ('categories', '/categories'),
     # ('tags', '/tags'),
     # ('rss', '/feeds/all.atom.xml'),
     # ('archive', '/archives.html'),
