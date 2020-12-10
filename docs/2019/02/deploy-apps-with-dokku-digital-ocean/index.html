@@ -108,14 +108,12 @@ $ sudo apt-get upgrade
 <span class="c1"># do additional setup you might need (install fail2ban, configure ufw, etc.)</span>
 </code></pre></div>
 
-
 <p>As mentioned earlier, we can install plugins in order to enhance our glorious PaaS, so <a href="https://github.com/dokku/dokku-postgres">PostgreSQL</a> and <a href="https://github.com/dokku/dokku-letsencrypt">Let's Encrypt</a> Dokku plugins are usually a good start:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># On the Dokku host</span>
 $ sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git
 $ sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
 $ dokku plugin
 </code></pre></div>
-
 
 <p>In order to test our setup we need to create our first app where we will deploy our project and a database for the app to use:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># On the Dokku host</span>
@@ -130,7 +128,6 @@ $ dokku config helloworld
 $ dokku domains:report
 </code></pre></div>
 
-
 <p>On your local machine create a project directory and install Django in a virtual environment, then:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># On your local machine</span>
 <span class="c1"># this will create a new Django project based on a Heroku open-source template</span>
@@ -140,7 +137,6 @@ $ git add -A
 $ git commit -m <span class="s2">&quot;Initial commit&quot;</span>
 </code></pre></div>
 
-
 <p>In order to deploy the above project we have to add a git remote pointing to the Dokku instance:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># On your local machine</span>
 <span class="c1"># the user must be `dokku` otherwise it won&#39;t work. Also, the string after `:` must be the name of the Dokku app created earlier</span>
@@ -148,7 +144,6 @@ $ git remote add dokku dokku@dokku.yourdomain.com:helloworld
 <span class="c1"># deploy the app</span>
 $ git push dokku master
 </code></pre></div>
-
 
 <p>You will be able to witness all the deployment steps printed on the console, in the style of a Heroku deployment. If the deployment finished successfully, it will also show you the URLs where you can access the app you just deployed. In the above case it should be <code>http://helloworld.dokku.yourdomain.com/</code>.</p>
 <p>As a final step, we can get the project to be served over HTTPS using a <a href="https://letsencrypt.org/">Let's Encrypt</a> certificate:</p>
@@ -160,7 +155,6 @@ $ dokku letsencrypt helloworld
 <span class="c1"># and we make sure it gets renewed automatically</span>
 $ dokku letsencrypt:cron-job --add
 </code></pre></div>
-
 
 <p>You should be able to access the project at <code>https://helloworld.dokku.yourdomain.com/</code>. There are a few more things that you can do at this point, like setting up a redirect from <code>http</code> to <code>https</code> using <a href="https://github.com/dokku/dokku-redirect">dokku-redirect</a>, but I will stop here for now.</p>
 <p>If you want to find out more about Dokku please check out their great documentation over at <a href="http://dokku.viewdocs.io/dokku/">http://dokku.viewdocs.io/dokku/</a> and the quite extensive list of plugins they currently support <a href="http://dokku.viewdocs.io/dokku/community/plugins/">http://dokku.viewdocs.io/dokku/community/plugins/</a>.</p>
@@ -184,6 +178,7 @@ $ dokku letsencrypt:cron-job --add
                 </footer>
         </div>
 
-<script async src="https://a.angelramboi.com/a.js" data-ackee-server="https://a.angelramboi.com" data-ackee-domain-id="57e37041-c751-4008-b25e-fc87059487b7"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6badc6d8d8874100b4e1dde83a4f5f51"}'></script><!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>

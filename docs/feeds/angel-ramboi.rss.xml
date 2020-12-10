@@ -10,7 +10,6 @@ $ sudo apt-get upgrade
 $ sudo apt-get install samba samba-common-bin ntfs-3g hdparm
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Get the drive …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Angel Ramboi</dc:creator><pubDate>Wed, 19 Aug 2015 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:www.angelramboi.com,2015-08-19:/2015/08/turn-raspberrypi-into-a-simple-nas-server/</guid><category>articles</category><category>raspberrypi</category><category>nas</category></item><item><title>Make a python object property behave like a classmethod</title><link>https://www.angelramboi.com/2013/07/make-a-python-object-property-behave-like-a-classmethod/</link><description>&lt;p&gt;Using &lt;code&gt;@property&lt;/code&gt; is nice and peachy when you use the instance of the class, but what if you need to get that property without instantiating the class.&lt;/p&gt;
 &lt;p&gt;You can do that with &lt;code&gt;@classmethod&lt;/code&gt; (you'd say), but I want to use it as an attribute not as a method.&lt;/p&gt;
 &lt;p&gt;Without further …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Angel Ramboi</dc:creator><pubDate>Thu, 11 Jul 2013 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:www.angelramboi.com,2013-07-11:/2013/07/make-a-python-object-property-behave-like-a-classmethod/</guid><category>articles</category><category>python</category></item><item><title>Install Gnome3 on Ubuntu 11.04 Natty (impressions)</title><link>https://www.angelramboi.com/2011/06/install-gnome3-on-ubuntu-1104-natty-impressions/</link><description>&lt;p&gt;I decided to take a leap of faith and install Gnome3 and gnome-shell on my Ubuntu box.&lt;/p&gt;
@@ -21,12 +20,10 @@ $ sudo apt-get dist-upgrade
 $ sudo apt-get install gnome-shell
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Some fixes after restart:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt-get purge unity scrollbar* gnome-accessibility-themes
 $ sudo apt-get install gnome-themes-standard
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Extra …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Angel Ramboi</dc:creator><pubDate>Wed, 15 Jun 2011 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:www.angelramboi.com,2011-06-15:/2011/06/install-gnome3-on-ubuntu-1104-natty-impressions/</guid><category>articles</category><category>gnome3</category><category>ubuntu</category></item><item><title>Get the latest Firefox 64bit for Linux</title><link>https://www.angelramboi.com/2011/06/get-the-latest-firefox-64bit-for-linux/</link><description>&lt;p&gt;On the usual channels (like &lt;a href="http://www.mozilla.com/en-US/firefox/channel/"&gt;http://www.mozilla.com/en-US/firefox/channel/&lt;/a&gt; ) you can only download the 32bit version of the latest Firefox release.&lt;/p&gt;
 &lt;p&gt;But I stumbled over a public Mozilla FTP where they hold all releases, including the 64bit one.&lt;/p&gt;

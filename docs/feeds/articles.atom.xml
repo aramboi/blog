@@ -21,14 +21,12 @@ $ sudo apt-get upgrade
 &lt;span class="c1"&gt;# do additional setup you might need (install fail2ban, configure ufw, etc.)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;As mentioned earlier, we can install plugins in order to enhance our glorious PaaS, so &lt;a href="https://github.com/dokku/dokku-postgres"&gt;PostgreSQL&lt;/a&gt; and &lt;a href="https://github.com/dokku/dokku-letsencrypt"&gt;Let's Encrypt&lt;/a&gt; Dokku plugins are usually a good start:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# On the Dokku host&lt;/span&gt;
 $ sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git
 $ sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
 $ dokku plugin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;In order to test our setup we need to create our first app where we will deploy our project and a database for the app to use:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# On the Dokku host&lt;/span&gt;
@@ -43,7 +41,6 @@ $ dokku config helloworld
 $ dokku domains:report
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;On your local machine create a project directory and install Django in a virtual environment, then:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# On your local machine&lt;/span&gt;
 &lt;span class="c1"&gt;# this will create a new Django project based on a Heroku open-source template&lt;/span&gt;
@@ -53,7 +50,6 @@ $ git add -A
 $ git commit -m &lt;span class="s2"&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;In order to deploy the above project we have to add a git remote pointing to the Dokku instance:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# On your local machine&lt;/span&gt;
 &lt;span class="c1"&gt;# the user must be `dokku` otherwise it won&amp;#39;t work. Also, the string after `:` must be the name of the Dokku app created earlier&lt;/span&gt;
@@ -61,7 +57,6 @@ $ git remote add dokku dokku@dokku.yourdomain.com:helloworld
 &lt;span class="c1"&gt;# deploy the app&lt;/span&gt;
 $ git push dokku master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;You will be able to witness all the deployment steps printed on the console, in the style of a Heroku deployment. If the deployment finished successfully, it will also show you the URLs where you can access the app you just deployed. In the above case it should be &lt;code&gt;http://helloworld.dokku.yourdomain.com/&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;As a final step, we can get the project to be served over HTTPS using a &lt;a href="https://letsencrypt.org/"&gt;Let's Encrypt&lt;/a&gt; certificate:&lt;/p&gt;
@@ -73,7 +68,6 @@ $ dokku letsencrypt helloworld
 &lt;span class="c1"&gt;# and we make sure it gets renewed automatically&lt;/span&gt;
 $ dokku letsencrypt:cron-job --add
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;You should be able to access the project at &lt;code&gt;https://helloworld.dokku.yourdomain.com/&lt;/code&gt;. There are a few more things that you can do at this point, like setting up a redirect from &lt;code&gt;http&lt;/code&gt; to &lt;code&gt;https&lt;/code&gt; using &lt;a href="https://github.com/dokku/dokku-redirect"&gt;dokku-redirect&lt;/a&gt;, but I will stop here for now.&lt;/p&gt;
 &lt;p&gt;If you want to find out more about Dokku please check out their great documentation over at &lt;a href="http://dokku.viewdocs.io/dokku/"&gt;http://dokku.viewdocs.io/dokku/&lt;/a&gt; and the quite extensive list of plugins they currently support &lt;a href="http://dokku.viewdocs.io/dokku/community/plugins/"&gt;http://dokku.viewdocs.io/dokku/community/plugins/&lt;/a&gt;.&lt;/p&gt;</content><category term="articles"></category><category term="dokku"></category><category term="docker"></category><category term="devops"></category></entry><entry><title>Install Ubuntu side by side with Windows 10 on an Alienware 13"</title><link href="https://www.angelramboi.com/2015/11/install-ubuntu-on-alienware-13/" rel="alternate"></link><published>2015-11-10T00:00:00+01:00</published><updated>2015-11-10T00:00:00+01:00</updated><author><name>Angel Ramboi</name></author><id>tag:www.angelramboi.com,2015-11-10:/2015/11/install-ubuntu-on-alienware-13/</id><summary type="html">&lt;p&gt;The Alienware 13 R2 (2015) laptop is probably the best compact gaming rig out there, so as you'd expect the Linux the support is underwhelming, to say the least. This setup assumes we want to keep the Windows 10 install and have a dual-boot system.&lt;/p&gt;
@@ -105,14 +99,12 @@ $ nvidia-xconfig
 $ reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;There is a good part though to using proprietary driver, you can choose the video chipset the OS uses, either nVidia or Intel (which promises longer battery life). The not so cool part is that this switch does not happen on the fly and you have to log out and log in again to apply the change.&lt;/p&gt;
 &lt;h3&gt;Touchpad&lt;/h3&gt;
 &lt;p&gt;Getting the Synaptic touchpad to work was a lucky find. After doing a lot of messing around with &lt;code&gt;xinput&lt;/code&gt; and having little success, I found a seemingly unrelated post that suggested blacklisting the &lt;code&gt;i2c_hid&lt;/code&gt; kernel module:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;blacklist i2c_hid&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/modprobe.d/blacklist.conf
 $ sudo reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h3&gt;Wi-fi&lt;/h3&gt;
 &lt;h5&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; This should work with Ubuntu 15.10 out of the box after install and system updates. They seem to have added the patch around 6th of December 2015.&lt;/h5&gt;
@@ -132,7 +124,6 @@ $ sudo apt-get upgrade
 $ sudo apt-get install samba samba-common-bin ntfs-3g hdparm
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Get the drive …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is based on a fresh install of Rasbian downloaded from the &lt;a href="https://www.raspberrypi.org/downloads/raspbian/"&gt;official site&lt;/a&gt; and using a NTFS formated external USB drive.&lt;/p&gt;
 &lt;h3&gt;The setup&lt;/h3&gt;
 &lt;p&gt;Install all the packages we need to save the day:&lt;/p&gt;
@@ -140,7 +131,6 @@ $ sudo apt-get install samba samba-common-bin ntfs-3g hdparm
 $ sudo apt-get upgrade
 $ sudo apt-get install samba samba-common-bin ntfs-3g hdparm
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Get the drive identifier (ex. sda):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo fdisk -l
@@ -169,7 +159,6 @@ Disk identifier: 0xbc81592b
 /dev/sda2   *   &lt;span class="m"&gt;488263545&lt;/span&gt;   &lt;span class="m"&gt;488378644&lt;/span&gt;      &lt;span class="m"&gt;460400&lt;/span&gt;    c  W95 FAT32 &lt;span class="o"&gt;(&lt;/span&gt;LBA&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;My drive identifier is &lt;code&gt;sda&lt;/code&gt; in this case, so for the rest of the guide I will use that. Please use the identifier returned for your case.&lt;/p&gt;
 &lt;p&gt;Lets create and set the permissions for the future shared folder, and add a setup line to &lt;code&gt;/etc/fstab&lt;/code&gt; in order to mount it properly:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo mkdir -p /media/HDD &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo chmod -R &lt;span class="m"&gt;777&lt;/span&gt; /media/HDD/
@@ -177,12 +166,10 @@ $ sudo &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot
 $ sudo umount /dev/sda1 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo mount /dev/sda1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;In the samba config &lt;code&gt;/etc/samba/smb.conf&lt;/code&gt; uncomment the following lines:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;security = user&lt;/span&gt;
 &lt;span class="err"&gt;socket options = TCP_NODELAY&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;And add this at the end:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;[media]&lt;/span&gt;
@@ -198,7 +185,6 @@ $ sudo umount /dev/sda1 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; su
 &lt;span class="s"&gt;    read only = no&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;This will allow all users that authenticate properly to access that folder with write access.&lt;/p&gt;
 &lt;p&gt;Test configuration and restart the server:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;testparm&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
@@ -213,13 +199,11 @@ $ sudo umount /dev/sda1 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; su
 &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;service&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;samba&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;restart&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Create a local user and add it to samba users:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo useradd &amp;lt;USERNAME&amp;gt; -m -G users
 $ sudo passwd &amp;lt;USERNAME&amp;gt;
 $ sudo smbpasswd -a &amp;lt;USERNAME&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;And you're done. You should be able to find the server on the local network now and connect to it with the credentials provided above.&lt;/p&gt;
 &lt;h3&gt;Extras&lt;/h3&gt;
@@ -230,7 +214,6 @@ $ sudo apt-get purge wolfram-engine java-common oracle-java8-jdk
 $ sudo apt-get remove --auto-remove --purge libx11-.*
 $ sudo apt-get autoremove --purge &lt;span class="k"&gt;$(&lt;/span&gt;deborphan&lt;span class="k"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;h4&gt;Restricted folders&lt;/h4&gt;
 &lt;p&gt;Here is a sample Samba config for a folder restricted to a certain user, path and read only:&lt;/p&gt;
@@ -247,14 +230,12 @@ $ sudo apt-get autoremove --purge &lt;span class="k"&gt;$(&lt;/span&gt;deborphan
 &lt;span class="s"&gt;  read only = yes&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;h4&gt;Power savings&lt;/h4&gt;
 &lt;p&gt;If you want to spin-down your external hard drive when it's inactive, this should work on most drives:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo hdparm -S &lt;span class="m"&gt;240&lt;/span&gt; /dev/sda
 /dev/sda:
  setting standby to &lt;span class="m"&gt;240&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;20&lt;/span&gt; minutes&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Unfortunately it did not work on mine, so I had to do the following hack:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo hdparm -S &lt;span class="m"&gt;240&lt;/span&gt; /dev/sda
@@ -289,7 +270,6 @@ $ sudo hdparm -B127 -S240 /dev/disk/by-id/ata-ST2000DM001-1E6164_W1E842SW &lt;sp
  &lt;span class="nv"&gt;APM_level&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;127&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Don't worry about the errors, it works just fine. :)&lt;/p&gt;</content><category term="articles"></category><category term="raspberrypi"></category><category term="nas"></category></entry><entry><title>Make a python object property behave like a classmethod</title><link href="https://www.angelramboi.com/2013/07/make-a-python-object-property-behave-like-a-classmethod/" rel="alternate"></link><published>2013-07-11T00:00:00+02:00</published><updated>2013-07-11T00:00:00+02:00</updated><author><name>Angel Ramboi</name></author><id>tag:www.angelramboi.com,2013-07-11:/2013/07/make-a-python-object-property-behave-like-a-classmethod/</id><summary type="html">&lt;p&gt;Using &lt;code&gt;@property&lt;/code&gt; is nice and peachy when you use the instance of the class, but what if you need to get that property without instantiating the class.&lt;/p&gt;
 &lt;p&gt;You can do that with &lt;code&gt;@classmethod&lt;/code&gt; (you'd say), but I want to use it as an attribute not as a method.&lt;/p&gt;
 &lt;p&gt;Without further …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using &lt;code&gt;@property&lt;/code&gt; is nice and peachy when you use the instance of the class, but what if you need to get that property without instantiating the class.&lt;/p&gt;
@@ -315,12 +295,10 @@ $ sudo apt-get dist-upgrade
 $ sudo apt-get install gnome-shell
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Some fixes after restart:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt-get purge unity scrollbar* gnome-accessibility-themes
 $ sudo apt-get install gnome-themes-standard
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Extra …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I decided to take a leap of faith and install Gnome3 and gnome-shell on my Ubuntu box.&lt;/p&gt;
 &lt;p&gt;First the installation:&lt;/p&gt;
@@ -330,28 +308,23 @@ $ sudo apt-get dist-upgrade
 $ sudo apt-get install gnome-shell
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Some fixes after restart:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt-get purge unity scrollbar* gnome-accessibility-themes
 $ sudo apt-get install gnome-themes-standard
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Extra installs:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt-get install gnome-tweak-tool dconf-tools gnome-shell-extensions-common gnome-shell-extensions-user-theme
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Edit startup applications (the shortcut is missing from the applications list):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ gnome-session-properties
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;If you want to revert everything:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo apt-get install ppa-purge
 $ sudo ppa-purge ppa:gnome3-team/gnome3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Nice features I discovered so far:&lt;/p&gt;
 &lt;ul&gt;
@@ -385,7 +358,6 @@ $ sudo ppa-purge ppa:gnome3-team/gnome3
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;(gtk\_accel\_path &amp;quot;\&amp;lt;PurpleMain\&amp;gt;/Buddies/Show/Offline Buddies&amp;quot; &amp;quot;\&amp;lt;Control\&amp;gt;h&amp;quot;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Restarted Pidgin and it worked. There's a bunch of unused actions in that file so feel free to experiment. :)&lt;/p&gt;</content><category term="articles"></category><category term="pidgin"></category><category term="ubuntu"></category><category term="windows"></category></entry><entry><title>Install Firefox 4 beta with Adobe Flash Player on Ubuntu 64bit</title><link href="https://www.angelramboi.com/2011/01/install-firefox-4-beta-with-adobe-flash-player-on-ubuntu-64bit/" rel="alternate"></link><published>2011-01-23T00:00:00+01:00</published><updated>2011-01-23T00:00:00+01:00</updated><author><name>Angel Ramboi</name></author><id>tag:www.angelramboi.com,2011-01-23:/2011/01/install-firefox-4-beta-with-adobe-flash-player-on-ubuntu-64bit/</id><summary type="html">&lt;p&gt;You can get the latest Firefox build from the &lt;a href="https://launchpad.net/~ubuntu-mozilla-daily/+archive/ppa" title="Mozilla PPA"&gt;launchpad ppa repositories&lt;/a&gt;, but I found that the periodical beta release on Mozilla's website tends to be more stable and usable than the daily builds.&lt;/p&gt;
 &lt;p&gt;Unfortunately the downloadable build is only 32bit, thus not compatible with the installed plugins in Ubuntu …&lt;/p&gt;</summary><content type="html">&lt;p&gt;You can get the latest Firefox build from the &lt;a href="https://launchpad.net/~ubuntu-mozilla-daily/+archive/ppa" title="Mozilla PPA"&gt;launchpad ppa repositories&lt;/a&gt;, but I found that the periodical beta release on Mozilla's website tends to be more stable and usable than the daily builds.&lt;/p&gt;
 &lt;p&gt;Unfortunately the downloadable build is only 32bit, thus not compatible with the installed plugins in Ubuntu 64bit version. After a bit of research I found out how to solve this little problem.&lt;/p&gt;
@@ -398,7 +370,6 @@ $ sudo ppa-purge ppa:gnome3-team/gnome3
 $ sudo apt-get install build-essential linux-headers-&lt;span class="sb"&gt;`&lt;/span&gt;uname -r&lt;span class="sb"&gt;`&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Make sure the VBoxGuestAdditions.iso is mounted.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="vbox-image" src="/images/2011/vbox.jpg" title="VirtualBox Additions"&gt;&lt;/p&gt;
 &lt;p&gt;Reboot system. Then do:&lt;/p&gt;
@@ -408,7 +379,6 @@ mount: block device /dev/sr0 is write-protected, mounting read-only
 $ &lt;span class="nb"&gt;cd&lt;/span&gt; /media/cdrom
 $ sudo ./VBoxLinuxAdditions-x86.run
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;If you have 64bit Ubuntu you should run the &lt;code&gt;VBoxLinuxAdditions-amd64.run&lt;/code&gt; file.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; VirtualBox 4.0 merged the two files in one, &lt;code&gt;VBoxLinuxAdditions.run&lt;/code&gt;. Also the above image is not accurate for this version, use 'Install Guest Additions...' (Host+D) to load the virtual drive.&lt;/p&gt;
@@ -425,12 +395,10 @@ $ sudo ./VBoxLinuxAdditions-x86.run
 &lt;span class="err"&gt;(Could not find the X.Org or XFree86 Window System.)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Don't worry about the windows system drivers error as you don't use them on Ubuntu server edition.&lt;/p&gt;
 &lt;p&gt;After reboot you will be able to mount your shared folders like so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo mount -t vboxsf shared_folder_name /path/to/folder
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;To mount the shared folders automatically every time you boot, add  this line (without the &lt;code&gt;sudo&lt;/code&gt;) to the end of &lt;code&gt;/etc/init.d/rc.local&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;To uninstall the guest additions use:&lt;/p&gt;
@@ -465,7 +433,6 @@ Target field. It should look like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;quot;C:\Program Files (x86)\Mozilla Firefox\firefox.exe&amp;quot; -P&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Save and open Firefox with that shortcut. The profile manager windows
 should appear (image bellow), click on Create Profile and create the
 "beta" profile.&lt;/p&gt;
@@ -476,11 +443,9 @@ like so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;quot;C:\Program Files (x86)\Mozilla Firefox\firefox.exe&amp;quot; -P default&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;Also edit the Firefox beta shortcut like so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;quot;C:\Program Files (x86)\Mozilla Firefox 4.0 Beta 6\firefox.exe&amp;quot; -P beta&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;That's it. Happy testing.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: Another way to solve this is to install the &lt;a href="http://portableapps.com/apps/internet/firefox_portable/test" title="Firefox portable"&gt;portable

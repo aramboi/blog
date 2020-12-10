@@ -94,7 +94,6 @@ $ sudo apt-get upgrade
 $ sudo apt-get install samba samba-common-bin ntfs-3g hdparm
 </code></pre></div>
 
-
 <p>Get the drive identifier (ex. sda):</p>
 <div class="highlight"><pre><span></span><code>$ sudo fdisk -l
 
@@ -122,7 +121,6 @@ Disk identifier: 0xbc81592b
 /dev/sda2   *   <span class="m">488263545</span>   <span class="m">488378644</span>      <span class="m">460400</span>    c  W95 FAT32 <span class="o">(</span>LBA<span class="o">)</span>
 </code></pre></div>
 
-
 <p>My drive identifier is <code>sda</code> in this case, so for the rest of the guide I will use that. Please use the identifier returned for your case.</p>
 <p>Lets create and set the permissions for the future shared folder, and add a setup line to <code>/etc/fstab</code> in order to mount it properly:</p>
 <div class="highlight"><pre><span></span><code>$ sudo mkdir -p /media/HDD <span class="o">&amp;&amp;</span> sudo chmod -R <span class="m">777</span> /media/HDD/
@@ -130,12 +128,10 @@ $ sudo <span class="nb">echo</span> <span class="s2">&quot;/dev/sda1       /medi
 $ sudo umount /dev/sda1 <span class="o">&amp;&amp;</span> sudo mount /dev/sda1
 </code></pre></div>
 
-
 <p>In the samba config <code>/etc/samba/smb.conf</code> uncomment the following lines:</p>
 <div class="highlight"><pre><span></span><code><span class="err">security = user</span>
 <span class="err">socket options = TCP_NODELAY</span>
 </code></pre></div>
-
 
 <p>And add this at the end:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[media]</span>
@@ -151,7 +147,6 @@ $ sudo umount /dev/sda1 <span class="o">&amp;&amp;</span> sudo mount /dev/sda1
 <span class="s">    read only = no</span>
 </code></pre></div>
 
-
 <p>This will allow all users that authenticate properly to access that folder with write access.</p>
 <p>Test configuration and restart the server:</p>
 <div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">testparm</span><span class="w"></span>
@@ -166,13 +161,11 @@ $ sudo umount /dev/sda1 <span class="o">&amp;&amp;</span> sudo mount /dev/sda1
 <span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">service</span><span class="w"> </span><span class="n">samba</span><span class="w"> </span><span class="n">restart</span><span class="w"></span>
 </code></pre></div>
 
-
 <p>Create a local user and add it to samba users:</p>
 <div class="highlight"><pre><span></span><code>$ sudo useradd &lt;USERNAME&gt; -m -G users
 $ sudo passwd &lt;USERNAME&gt;
 $ sudo smbpasswd -a &lt;USERNAME&gt;
 </code></pre></div>
-
 
 <p>And you're done. You should be able to find the server on the local network now and connect to it with the credentials provided above.</p>
 <h3>Extras</h3>
@@ -183,7 +176,6 @@ $ sudo apt-get purge wolfram-engine java-common oracle-java8-jdk
 $ sudo apt-get remove --auto-remove --purge libx11-.*
 $ sudo apt-get autoremove --purge <span class="k">$(</span>deborphan<span class="k">)</span>
 </code></pre></div>
-
 
 <h4>Restricted folders</h4>
 <p>Here is a sample Samba config for a folder restricted to a certain user, path and read only:</p>
@@ -200,14 +192,12 @@ $ sudo apt-get autoremove --purge <span class="k">$(</span>deborphan<span class=
 <span class="s">  read only = yes</span>
 </code></pre></div>
 
-
 <h4>Power savings</h4>
 <p>If you want to spin-down your external hard drive when it's inactive, this should work on most drives:</p>
 <div class="highlight"><pre><span></span><code>$ sudo hdparm -S <span class="m">240</span> /dev/sda
 /dev/sda:
  setting standby to <span class="m">240</span> <span class="o">(</span><span class="m">20</span> minutes<span class="o">)</span>
 </code></pre></div>
-
 
 <p>Unfortunately it did not work on mine, so I had to do the following hack:</p>
 <div class="highlight"><pre><span></span><code>$ sudo hdparm -S <span class="m">240</span> /dev/sda
@@ -242,7 +232,6 @@ $ sudo hdparm -B127 -S240 /dev/disk/by-id/ata-ST2000DM001-1E6164_W1E842SW <span 
  <span class="nv">APM_level</span>  <span class="o">=</span> <span class="m">127</span>
 </code></pre></div>
 
-
 <p>Don't worry about the errors, it works just fine. :)</p>
       </div>
       <div class="back-to-top">
@@ -264,6 +253,7 @@ $ sudo hdparm -B127 -S240 /dev/disk/by-id/ata-ST2000DM001-1E6164_W1E842SW <span 
                 </footer>
         </div>
 
-<script async src="https://a.angelramboi.com/a.js" data-ackee-server="https://a.angelramboi.com" data-ackee-domain-id="57e37041-c751-4008-b25e-fc87059487b7"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6badc6d8d8874100b4e1dde83a4f5f51"}'></script><!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>

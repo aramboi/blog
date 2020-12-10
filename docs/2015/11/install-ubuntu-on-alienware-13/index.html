@@ -113,14 +113,12 @@ $ nvidia-xconfig
 $ reboot
 </code></pre></div>
 
-
 <p>There is a good part though to using proprietary driver, you can choose the video chipset the OS uses, either nVidia or Intel (which promises longer battery life). The not so cool part is that this switch does not happen on the fly and you have to log out and log in again to apply the change.</p>
 <h3>Touchpad</h3>
 <p>Getting the Synaptic touchpad to work was a lucky find. After doing a lot of messing around with <code>xinput</code> and having little success, I found a seemingly unrelated post that suggested blacklisting the <code>i2c_hid</code> kernel module:</p>
 <div class="highlight"><pre><span></span><code>$ sudo <span class="nb">echo</span> <span class="s2">&quot;blacklist i2c_hid&quot;</span> &gt;&gt; /etc/modprobe.d/blacklist.conf
 $ sudo reboot
 </code></pre></div>
-
 
 <h3>Wi-fi</h3>
 <h5><strong>UPDATE:</strong> This should work with Ubuntu 15.10 out of the box after install and system updates. They seem to have added the patch around 6th of December 2015.</h5>
@@ -153,6 +151,7 @@ $ sudo reboot
                 </footer>
         </div>
 
-<script async src="https://a.angelramboi.com/a.js" data-ackee-server="https://a.angelramboi.com" data-ackee-domain-id="57e37041-c751-4008-b25e-fc87059487b7"></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6badc6d8d8874100b4e1dde83a4f5f51"}'></script><!-- End Cloudflare Web Analytics -->
+
 </body>
 </html>
