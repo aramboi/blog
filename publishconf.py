@@ -16,4 +16,10 @@ UTTERANCES_MAPPING = 'title'
 UTTERANCES_LABEL = 'comments'
 UTTERANCES_THEME = 'github-light'
 
-ANALYTICS_TAGS = """<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6badc6d8d8874100b4e1dde83a4f5f51"}'></script><!-- End Cloudflare Web Analytics -->"""
+ANALYTICS_TAGS = '''<!-- Panelbear Analytics - We respect your privacy -->
+<script async src="https://cdn.panelbear.com/analytics.js?site=Km4oFkEK6F6"></script>
+<script>
+    window.panelbear = window.panelbear || function() { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+    panelbear('config', { site: 'Km4oFkEK6F6' });
+</script>
+'''
